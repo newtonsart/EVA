@@ -1,6 +1,5 @@
-# ANA (**STILL BEING IN DEVELOPMENT**)
-**A**mazing **N**eatness **A**ssistant
-
+# EVA (**STILL BEING IN DEVELOPMENT**)
+**E**mbedded **V**oice **A**ssistant
 
 ## Info
 Voice assistant being in developement.
@@ -11,6 +10,7 @@ Voice assistant being in developement.
 - [x] Exit program
 - [ ] Wikipedia search
 - [ ] Run Programs
-- [ ] Play music(also playlists)
+- [ ] Play music
+- [ ] Search for word definitions
 
 If you have more ideas, tell me them pls
