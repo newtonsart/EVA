@@ -8,7 +8,7 @@ Voice assistant being in developement.
 - [x] Change language
 - [x] Message if it's not understanding you
 - [x] Exit program
-- [ ] Wikipedia search
+- [x] Wikipedia search
 - [ ] Run Programs
 - [ ] Play music
 - [ ] Search for word definitions
