@@ -1,4 +1,4 @@
-import say, json
+import say, json, wikipedia
 
 change_commands = {"en":"change","es":"cambiar"}
 exit_commands = {"en":"exit", "es":"salir"}
@@ -37,21 +37,29 @@ def get_func(speech, lang):
             with open("info.json", "r") as read_file:
                 data = json.load(read_file)
                 user = data["username"]
+
             if lang == "en":
-                say.English(f"Goodbye, {user}")
+                say.English("Goodbye, "+user)
+
             elif lang == "es":
-                say.Spanish(f"Adios, {user}")
+                say.Spanish("Adios, "+user)
             exit()
         elif mode == search_commands[lang]:
             wikipedia.set_lang(lang)
-            search = wikipedia.summary(speech_divided[1:]
+            try:
+                search = wikipedia.summary(speech_divided[1::], sentences=2)
+            
+                if lang == "en":
+                    say.English("This is what i found on wikipedia about {}. {}".format(speech_divided[1::], search))
+                elif lang == "es":
+                    say.Spanish("Esto es lo que he encontrado en la wikipedia sobre {}. {}".format(speech_divided[1::],search))
+            except wikipedia.exceptions.DisambiguationError:
+                if lang == "en":
+                    say.English("Be more precise")
+                elif lang == "es":
+                    say.Spanish("Sé más preciso")
+            
 
-            if lang == "en":
-                say.English(f"This is what i found on wikipedia. {search}")
-
-            elif lang == "es":
-                say.Spanish(f"Esto es lo que he encontrado en la wikipedia, {search}")
-        
         else: 
             print("Strange input: \n"+speech)
             if lang == "en":
