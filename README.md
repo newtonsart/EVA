@@ -6,7 +6,9 @@ Run the following commands on the terminal:
 ```
 cd ~/Downloads/
 git clone https://github.com/lilart/EVA
-cd EVA/EVA
+cd EVA
+pip3 install -r requirements.txt
+cd EVA
 python3 __main__.py
 ```
 
