@@ -1,5 +1,8 @@
-# EVA (**STILL BEING IN DEVELOPMENT**)
+# EVA
 **E**mbedded **V**oice **A**ssistant
+
+I dont recommend you using it, it's very slow, and there are better alternatives.
+Improvements will be apreciated, but I'll leave this code here, because I dont want it to be private or deleted...
 
 ## How to try it??
 Run the following commands on the terminal:
